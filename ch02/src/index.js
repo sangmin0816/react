@@ -6,13 +6,13 @@ import 'bulma/css/bulma.min.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import Test3 from './Test3';
+import Test4 from './Test4';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
-    <Test3 />
+    <Test4 />
   </React.StrictMode>
 );
 
