@@ -32,6 +32,7 @@ class Test4 extends Component {
             className={this.state.clicked? this.state.validated?"input success":"input failure":"input"} />
 
             <button className="button" onClick={this.handleClick}>Click</button>
+            
             <p>Is Valid? {this.state.validated?"yes":"no"}</p>
          </div>
       )
