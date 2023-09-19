@@ -1,0 +1,42 @@
+- var name = "name1";
+- var student = {no: 1, name:"student1", point: 90}
+- var arr = [1, 2, 3, 4];
+
+doctype html 
+html 
+   head 
+      title Pug(Jade)
+      link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css")
+      style.
+         .container {margin: 10px auto; padding: 10px; border: 1px solid black;}
+   
+   body 
+      h1 Pug3
+      div.container
+         ul#book-list
+            li: a(href="#book-a") book-a
+            //- 반드시 띄어뜨기 필요. li:a가 아니라 li: a로 해야 함
+            li 
+               a(href="#book-b") book-b
+
+      div.container
+         h2= name
+         h3 This is Name: #{name}
+         h3 #{student.no} #{student.name} #{student.point}
+
+      .container 
+         for a in arr
+            li=a
+
+      .container 
+         label(for="sel") arr select
+         select#sel
+            each a, i in arr 
+               option(value=i) arr: #{a}
+
+         label(for="id") id
+         input(type="text" name="id" id="id" placeholder="enter your id")
+
+         if name=="name1"
+            p Hello #{name}
+         

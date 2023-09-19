@@ -1,0 +1,10 @@
+$primaryColor: #0a4534;
+$visitedColor: #e6dd86;
+
+a {
+   font-size: 30px;
+   font-weight: bold;
+   text-decoration: none;
+   &:hover {color: $primaryColor;}
+   &:active {color: $visitedColor;}
+}
