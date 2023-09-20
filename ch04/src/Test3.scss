@@ -1,0 +1,100 @@
+@import '~/node_modules/include-media/dist/_include-media.scss';
+@import '~/node_modules/open-color/open-color.scss';
+
+$red: red;
+$orange: orange;
+$yellow: yellow;
+$green: green;
+$blue: blue;
+$indigo: indigo;
+$violet: violet;
+
+@mixin rectangular($size){
+   $calcualted: 150px*$size;
+   width: $calcualted;
+   height: 60px;
+}
+
+.Test3 {
+   clear: both;
+   background: $oc-gray-2;
+   @include media('<768px') {
+      background: $oc-gray-9;
+   }
+   // 폭이 768 이하라면 모바일
+   @include media('<960px') {
+      background: $oc-gray-6;
+   }
+   // 태블릿
+   @include media('>=960px') {
+      background: $oc-gray-3;
+   }
+
+   ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      height: 600px;
+      width: 1200px;
+   }
+
+   .box {
+      cursor: pointer;
+      width: 0;
+      transition-duration: 2.5s;
+      &.red {
+         background-color: $red;
+         transition-delay: 0s;
+      }
+      &.orange {
+         background-color: $orange;
+         transition-delay: 0.5s;
+      }
+      &.yellow{
+         background-color: $yellow;
+         transition-delay: 1s;
+      }
+      &.green{
+         background-color: $green;
+         transition-delay: 1.5s;
+      }
+      &.blue{
+         background-color: $blue;
+         transition-delay: 2s;
+      }
+      &.indigo{
+         background-color: $indigo;
+         transition-delay: 2.5s;
+      }
+      &.violet{
+         background-color: $violet;
+         transition-delay: 3s;
+      }
+   }
+   
+   ul:hover {
+      .box {
+         &.red {
+            @include rectangular(1);
+         }
+         &.orange {
+            @include rectangular(2);
+         }
+         &.yellow{
+            @include rectangular(3);
+         }
+         &.green{
+            @include rectangular(4);
+         }
+         &.blue{
+            @include rectangular(5);
+         }
+         &.indigo{
+            @include rectangular(6);
+         }
+         &.violet{
+            @include rectangular(7);
+         }
+      }
+   }
+}
