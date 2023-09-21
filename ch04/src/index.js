@@ -1,16 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+// import './index.css';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Test1 from './Test1';
+// import Test1 from './Test1';
 // import Test2 from './Test2';
-import Test3 from './Test3';
+// import Test3 from './Test3';
+// import Test4 from './Test4';
+import Test5 from './Test5';
+
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/scss/bootstrap.scss';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Test3 />
+    <Test5 />
   </React.StrictMode>
 );
 
